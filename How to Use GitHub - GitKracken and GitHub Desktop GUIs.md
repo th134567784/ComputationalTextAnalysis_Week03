@@ -30,9 +30,6 @@ In the upper-right corner of any page, click your profile photo, then click Sett
 You can primarily use/manage Git on the command line, however, there are several GUI Git clients, which one of them is GitKraken. 
 In this document, we show you some information about GitKraken, a tool that allows us to fulfill these purposes in a graphic and simplified way.
 
-> GitKracken Screenshot (Mac)
-<img src="https://www.gitkraken.com/img/index/gk-product-2.png" height="300">
-
 Among its most relevant features are the following:
 - Built-in fusion tool.
 - Integrates with a user’s GitHub or Bitbucket account, GitLab.
