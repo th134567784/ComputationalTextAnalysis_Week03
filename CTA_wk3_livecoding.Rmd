@@ -1,0 +1,132 @@
+---
+title: "CTA_wk3_dictionary"
+author: "Marion Lieutaud"
+date: "1/31/2024"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Packages
+```{r packages}
+library(tidyverse)
+library(quanteda)
+library(readtext)
+```
+
+## Data
+\textcolor{red}{The most common problem related to loading data into R are misspecified locations of files or directories.}
+
+If a *path* is relative, check where you are using getwd() and set the root directory of your project using setwd(). On Windows, you also have to replace all \ in a path with /.
+
+You can also use the R menu at the top of your screen: Session / Set working directory
+
+```{r}
+getwd()
+```
+
+## import the barbie and oppenheimer data from the Github repo
+use read.csv() command
+```{r}
+
+```
+
+## bind the different datasets
+```{r}
+# create variable to identify the two datasets
+
+# bind rows to make a single dataset
+
+# add row number variable
+
+```
+note: binding is a way of merging data (there are other ways)
+
+
+# Basic operations and preprocessing
+
+## corpus
+```{r}
+#creating corpus
+
+#assigning names to each document
+```
+
+```{r}
+# subsetting corpus
+
+# extracting document-level variables
+```
+
+## Tokenisation and cleanup
+```{r}
+# start from corpus data
+# remove punctuation
+# remove stopwords
+# to lower but keep acronyms
+```
+
+## document-feature matrix
+```{r}
+# you can also do a lot of text data preprocessing after creating a Dfm, e.g. 
+# and you can use it to select or remove features
+```
+
+## removing features, introducing Regex
+
+Look up regex cheatsheet
+```{r}
+
+```
+
+# regular expressions, glob vs regex, fixed
+```{r}
+```
+
+# dictionary method
+```{r}
+library(quanteda.dictionaries)
+```
+Dictionary creation is done through the `dictionary()` function, which classes a named list of characters as a dictionary.
+
+## creating your own dictionary
+```{r}
+# create your own dictionary
+```
+
+The most frequent scenario is when we pass through a dictionary at the time of `dfm()` creation.
+```{r}
+# dfm with dictionaries
+```
+
+
+## Applying an existing dictionary
+Apply the Lexicoder Sentiment Dictionary to the selected contexts using tokens_lookup().
+```{r}
+# look at the categories of the Lexicoder
+lengths(data_dictionary_LSD2015)
+
+# select only the "negative" and "positive" categories
+data_dictionary_LSD2015_pos_neg <- data_dictionary_LSD2015[1:2]
+```
+
+
+```{r}
+# go back to our barbie/oppenheimer tokenised data
+
+
+# create a document document-feature matrix and group it by day
+
+
+# prep data + sentiment ratio variable for analysis
+
+
+# basic plot: frequency of positive words
+
+
+# basic plot: frequency of positive/negative words
+
+```
+
