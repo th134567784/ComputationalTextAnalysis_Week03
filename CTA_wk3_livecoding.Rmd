@@ -30,13 +30,15 @@ getwd()
 ## import the barbie and oppenheimer data from the Github repo
 use read.csv() command
 ```{r}
-
+barbie_post<-read.csv("Barbenheimer_Reddit_Posts - Barbenheimer_Reddit_Posts.csv")
+Barbie_Posts<-read.csv("Barbie_Reddit_Posts - Barbie_Reddit_Posts.csv")
+Oppenheimer_Posts<-read.csv("Oppenheimer_Reddit_Posts - Oppenheimer_Reddit_Posts.csv")
 ```
 
 ## bind the different datasets
 ```{r}
 # create variable to identify the two datasets
-
+Barbie_Posts%>%mutate(movie="barbie")
 # bind rows to make a single dataset
 
 # add row number variable
@@ -128,5 +130,8 @@ data_dictionary_LSD2015_pos_neg <- data_dictionary_LSD2015[1:2]
 
 # basic plot: frequency of positive/negative words
 
+```
+```{r}
+hhh
 ```
 
